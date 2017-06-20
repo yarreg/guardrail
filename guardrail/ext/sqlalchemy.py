@@ -137,7 +137,7 @@ class SqlalchemyPermissionSchemaFactory(models.BasePermissionSchemaFactory):
             agent=sa.orm.relationship(agent),
             target_id=_reference_column(target, nullable=False, index=True),
             target=sa.orm.relationship(target),
-            permission=sa.Column(sa.String, nullable=False, index=True),
+            permission=sa.Column(sa.String(255), nullable=False, index=True),
         )
 
 
